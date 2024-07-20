@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(16, 188, 111);
+    height: 15vh;
+}
+
+#btn3 {
+    color: aliceblue;
+    font-size: 35px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+
+    border-radius: 122px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+label #btn2 {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    right: 55px;
+    top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+ul {
+    float: right;
+    margin-right: 80px;
+}
+
+li {
+    display: inline-block;
+    margin: 45px 20px 45px 10px;
+}
+
+li a {
+    position: relative;
+    list-style-type: none;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    padding: 8px 0px;
+    text-transform: uppercase;
+}
+
+a::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(226, 66, 66);
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s linear;
+}
+
+a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media (max-width:700px) {
+    nav #btn3 {
+        font-size: 25px;
+        top: 35px;
+        left: 25px;
+    }
+
+    label #btn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: aqua;
+        text-align: center;
+        top: 15vh;
+        left: -100%;
+        transition: all 1s;
+    }
+    .mu {
+        width: 23px;
+        border-radius: 50%;
+        position: relative;
+        left: -73px;
+        top: 10px;
+    
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 1;
+    }
+
+    #check:checked~label #btn {
+        display: none;
+    }
+
+    #check:checked~label #btn2 {
+        display: block;
+    }
+
+    ul li {
+        display: block;
+        margin: 80px;
+
+
+    }
+
+    li a {
+        color: black;
+        font-size: 30px;
+    }
+
+   
+
+}
+
+main {
+    height: 77vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/3422122.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.con {
+    background-image: url(img/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: 30vw 35vh;
+    background-position: right  ;
+    text-align: center;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    height: 80%;
+    width: 80%;
+    border-radius: 12px;
+
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mu {
+    width: 23px;
+    border-radius: 50%;
+    position: relative;
+    left: -115px;
+    top: 10px;
+
+}
+p{
+    position: relative;
+    bottom: 11px;
+}
+
+.gif{
+display: flex;
+width: 100px;
+height: 50px;
+}
+.songlist {
+    display: flex;
+    height: 100%;
+    width: 55%;
+    /* gap: 15px; */
+    background-color: blueviolet;
+    color: whitesmoke;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+    border-radius: 15px;
+    gap: 2px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.play {
+    position: fixed;
+    width: 100vw;
+    bottom: 8vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    color: blue;
+    flex-direction: column;
+}
+
+#bar {
+    width: 75vw;
+    background: red;
+    cursor: pointer;
+    margin: 10PX;
+}
+
+.icons {
+    display: flex;
+    gap: 50PX;
+
+}
+
+#btn_1,
+#btn_2,
+#btn_3 {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(23, 219, 134);
+    height: 08vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    animation: hehe 1s ease 0s infinite ;
+}
+@keyframes hehe {
+    0%{ color: black;
+
+    }
+50%{
+    color: red;
+}
+100%{
+    color: blueviolet;
+}
+}
